@@ -5,8 +5,8 @@ import os
 import traceback
 
 token = os.environ['DISCORD_BOT_TOKEN']
-client = commands.Bot(command_prefix='.')
 
+client = commands.Bot(command_prefix='.')
 @client.event
 async def on_ready():
     print('Logged in as')
