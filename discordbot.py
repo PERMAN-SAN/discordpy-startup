@@ -1,10 +1,6 @@
 import discord
 from discord.ext import commands
 import asyncio
-import os
-import traceback
-
-TOKEN = 'NzM0MDYyMjgxMDI0OTk1MzM4.XxMSfQ.U7qV9W66kxrOJAYcVxvHEvc5yzQ'
 
 client = commands.Bot(command_prefix='.')
 @client.event
