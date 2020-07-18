@@ -5,6 +5,7 @@ import os
 import traceback
 
 token = os.environ['DISCORD_BOT_TOKEN']
+client = commands.Bot(command_prefix='.')
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -12,7 +13,7 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-client = commands.Bot(command_prefix='.')
+
 @client.event
 async def on_ready():
     print('Logged in as')
