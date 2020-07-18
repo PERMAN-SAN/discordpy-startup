@@ -4,7 +4,7 @@ import asyncio
 import os
 import traceback
 
-token = os.environ['DISCORD_BOT_TOKEN']
+TOKEN = 'NzM0MDYyMjgxMDI0OTk1MzM4.XxMSfQ.U7qV9W66kxrOJAYcVxvHEvc5yzQ'
 
 client = commands.Bot(command_prefix='.')
 @client.event
