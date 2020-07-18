@@ -1,6 +1,10 @@
 import discord
 from discord.ext import commands
 import asyncio
+import os
+import traceback
+
+token = os.environ['DISCORD_BOT_TOKEN']
 
 client = commands.Bot(command_prefix='.')
 @client.event
@@ -64,4 +68,4 @@ async def rect(ctx, about = "募集", cnt = 4, settime = 10.0):
         await msg.remove_reaction(str(reaction.emoji), user)
 
 
-client.run("YOU------TOKEN")
+client.run(token)
