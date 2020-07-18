@@ -3,17 +3,17 @@ import asyncio
 import os
 import traceback
 
-client = commands.Bot(command_prefix='.')
+bot = commands.Bot(command_prefix='.')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-@client.event
+@bot.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
     print(client.user.id)
     print('------')
 
-@client.command()
+@bot.command()
 async def rect(ctx, about = "募集", cnt = 4, settime = 10.0):
     cnt, settime = int(cnt), float(settime)
     reaction_member = [">>>"]
@@ -66,4 +66,4 @@ async def rect(ctx, about = "募集", cnt = 4, settime = 10.0):
         # リアクション消す。メッセージ管理権限がないとForbidden:エラーが出ます。
         await msg.remove_reaction(str(reaction.emoji), user)
 
-client.run(token)
+bot.run(token)
